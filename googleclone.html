@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Google Clone</title>
+    <link rel="stylesheet" href="googleclone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="firstContainer">
+      <ul class="listOne">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+      <ul class="listTwo">
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">Images</a></li>
+        <li><a href="#" class="hoverStyle"><img alt="google menu" src="dots-menu.png" title="Google apps"></a></li>
+        <li><a href="#" class="signIn hoverStyle">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="secondContainer">
+      <img src="Capture1.jpg" alt="google" class="titleImage">
+      <div class="form-outer">
+        <div class="container">
+          <form class="form">
+            <div class="form-input">
+              <span class="icon"><i class="fa fa-search"></i></span>
+              <input type="text" title="Search"  id="cloneInput">
+            </div>
+
+        </div>
+      </div>
+
+      <button class="buttonStyle">Google Search</button>
+      <button class="buttonStyle" id="luckButton">I'm Feeling Lucky</button>
+    </div>
+
+    <footer class="Footer">
+      <ul class="listOne">
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">How Search Works</a></li>
+      </ul>
+
+      <ul class="listTwo">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </footer>
+    <script >
+      const messages = ["I'm Feeling Trendy","I'm Feeling Artistic","I'm Feeling Puzzled","I'm feeling Adventerous","I'm Feeling Doodley","I'm Feeling Happy","I'm Feeling Elated","I'm Feeling Perplexed","I'm Feeling Stellar","I'm Feeling Playful","I'm Feeling Curious","I'm Feeling Inquisitive","I'm Feeling Enamored","I'm Feeling Beautiful","I'm Feeling Regal","I'm Feeling Baffled","I'm Feeling Peaceful"];
+      const luckButton = document.getElementById('luckButton');
+
+      function getRandomMessage() {
+        let message = messages[Math.floor(Math.random() * messages.length)];
+        return message;
+      }
+
+      luckButton.addEventListener('mouseover',() =>{
+        luckButton.innerHTML = getRandomMessage();
+      });
+
+      luckButton.addEventListener('mouseout',() =>{
+        luckButton.innerHTML = "I'm Feeling Lucky";
+      });
+
+    </script>
+  </body>
+
+</html>
